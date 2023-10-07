@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add this to your CSS file or style tag */
+/* CSS */
+  body{
+    background: black;
+  }
+  .nav-link{
+    background: black;
+    color: white;
+  }
+
+
+  .active {
+    background-color: black; /* Click hone par background color badalne ke liye */
+    color: white; /* Click hone par text color badalne ke liye */
+  }
+
+  
