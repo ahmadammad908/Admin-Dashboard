@@ -13,6 +13,7 @@ import Vector6 from "../assets/images/Vector 6.png"
 
 import Ellipse from "../assets/images/Ellipse.png"
 import group from "../assets/images/group.png";
+import Rectangle from "../assets/images/Rectangle.png"
 import { FaSearch } from 'react-icons/fa'
 
 
@@ -123,6 +124,57 @@ const data = [
 ]
 console.log(data)
 //////Menu Items /////////////////////
+
+const Admin = [
+    {
+        image2: group,
+        image3: Rectangle,
+        name: "Admin Name ",
+        Email: 'admin123@gmail.com'
+    },
+    {
+        image2: group,
+        image3: Rectangle,
+        Email: 'admin123@gmail.com',
+        name: "Admin Name "
+    },
+    {
+        image2: group,
+        image3: Rectangle,
+        name: "Admin Name ",
+        Email: 'admin123@gmail.com'
+    },
+    {
+        image2: group,
+        image3: Rectangle,
+        name: "Admin Name ",
+        Email: 'admin123@gmail.com'
+    },
+    {
+        image2: group,
+        image3: Rectangle,
+        name: "Admin Name ",
+        Email: 'admin123@gmail.com'
+    },
+    {
+        image2: group,
+        image3: Rectangle,
+        name: "Admin Name ",
+        Email: 'admin123@gmail.com'
+    },
+    {
+        image2: group,
+        image3: Rectangle,
+        name: "Admin Name ",
+        Email: 'admin123@gmail.com'
+    },
+    {
+        image2: group,
+        image3: Rectangle,
+        name: "Admin Name ",
+        Email: 'admin123@gmail.com'
+    }
+]
 const menuItem = [
     {
         path: "/",
@@ -155,10 +207,11 @@ const menuItem = [
         name: "Add Admin",
         img: Maskgroup2,
     },
+    
 
 ];
 
-const User = () => {
+const Verification = () => {
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
 
@@ -208,46 +261,36 @@ const User = () => {
                             <img src={Vector6} className='my-[10px] md:my-[0px] md:mr-[10px] ml-[10px]'></img>
                         </div>
                         <div className='p-[20px] '>
-                            <h1 className='text-white text-4xl font-bold'>Users</h1>
+                            <h1 className='text-white text-2xl md:text-4xl font-bold'>Add Admin</h1>
                         </div>
-                        <div >
-                            <div className='flex flex-wrap md:justify-center justify-center'>
-                                
-                                    {
-                                        data.map((Data)=>(
-                                            <>
-                                            <div style={{ width: "210.937px", height: "210.937px", flexShrink: "0", zIndex: "20", background: "black", color: "white", margin: "10px", borderRadius: "10px" }}>
-                                                <div className='flex justify-end p-[10px]'>
-                                                    <img src={Data.image2}></img>
-                                                </div>
-                                                <div className='flex justify-center '>
-                                                    <img src={Data.image1}></img>
-                                                </div>
-                                                <div className='flex justify-start m-[10px] font-bold text-[10px]'>
-                                                    <h1>{Data.text}</h1>
-                                                </div>
-                                                <div className='flex justify-start  font-bold m-[10px] text-[10px]' >
-                                                    <h1>ID : {Data.ID}</h1>
-                                                </div>
-                                                <div className='flex justify-start  font-bold m-[10px] text-[10px]' >
-                                                    <h1>Contact : {Data.Contact}</h1>
-                                                </div>
-                                                <div className='flex justify-start  font-bold m-[10px] text-[10px]' >
-                                                    <h1>Email : {Data.Email}</h1>
+                        <div className='flex md:justify-end justify-center'>
+                            <button className='md:mr-[100px] bg-black text-white p-[10px] md:w-[200px] h-[50px] w-[150px] rounded-full'>
+                                Add Admin
+                            </button>
+                        </div>
+
+                        <div className='flex justify-center flex-wrap mt-[100px]'>
+                            {
+                                Admin.map((admin) => (
+                                    <>
+                                        <div className='w-[240px] h-[78px] shrink-0	 bg-black m-[10px] rounded-xl'>
+                                            <div className='flex justify-end mr-[10px] mt-[2px]'>
+                                                <img src={admin.image2}></img>
+                                            </div>
+                                            <div className='flex items-center m-[2px] ml-[10px]' >
+                                                <img src={admin.image3}></img>
+                                                <div className='ml-[10px]'>
+                                                    <h1 className='text-white text-[15px]'>{admin.name}</h1>
+                                                    <h1 className='text-[12px] text-white'>{admin.Email}</h1>
                                                 </div>
                                             </div>
-                                            
 
-                                            </>
-                                        ))
-
-                                    }
-
-                              
-
-
-                            </div>
+                                        </div>
+                                    </>
+                                ))
+                            }
                         </div>
+
 
                     </div>
 
@@ -277,4 +320,4 @@ const User = () => {
     )
 }
 
-export default User
+export default Verification

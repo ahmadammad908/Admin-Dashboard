@@ -158,7 +158,7 @@ const menuItem = [
 
 ];
 
-const User = () => {
+const Verification = () => {
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
 
@@ -208,7 +208,7 @@ const User = () => {
                             <img src={Vector6} className='my-[10px] md:my-[0px] md:mr-[10px] ml-[10px]'></img>
                         </div>
                         <div className='p-[20px] '>
-                            <h1 className='text-white text-4xl font-bold'>Users</h1>
+                            <h1 className='text-white text-2xl md:text-4xl font-bold'>Blocked User</h1>
                         </div>
                         <div >
                             <div className='flex flex-wrap md:justify-center justify-center'>
@@ -277,4 +277,4 @@ const User = () => {
     )
 }
 
-export default User
+export default Verification
